@@ -1,9 +1,13 @@
+function  createTitle(title){
+  return `<h1>${title}</h1>`
+}
+
 function createGame(player1, hour, player2,){
   return `
     <li>
       <img src="./assets/icons/icon-${player1}.svg" alt="Bandeira do ${player1}"/>
       <strong>${hour}</strong>
-      <img src="./assets/icons/icon-${player2}.svg" alt="Bandeira do ${player2}"/>
+      <img src="./assets/icons/icon-${player2}.svg" alt="Bandeira do ${player2}"/> 
     </li>
   `
 }
@@ -11,7 +15,7 @@ function createGame(player1, hour, player2,){
 let delay = -0.4;
 function createCard(date, day, games) {
   delay = delay + 0.4;
-  return`
+  return `
     <div class="card" style="animation-delay: ${delay}s">
       <h2>${date}<span>${day}</span></h2>
         <ul>
@@ -117,5 +121,4 @@ document.querySelector("#cards").innerHTML =
       createGame("ghana", "12:00", "uruguay") +
       createGame("serbia", "16:00", "switzerland") +
       createGame("cameroon", "16:00", "brazil")
-  ) 
-  
+  )
